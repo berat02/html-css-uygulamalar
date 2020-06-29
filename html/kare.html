@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../style/kare.css">
+	<script type="text/javascript">
+		function olustur()
+		{
+		var yukseklik = Number(document.getElementById('yukseklik').value);
+		var genislik = Number(document.getElementById('genislik').value);
+		var arkaplan = document.getElementById('arkaplan').value;
+		var hizalama = document.getElementById('hizalama').value;
+		if ( hizalama== "sağ")
+		{
+			document.getElementById('kutu').style.float="right"
+		}
+		else if(hizalama=="sol")
+		{
+			document.getElementById('kutu').style.float="left"
+		}
+		else
+		{
+			document.getElementById('kutu').style.float="none"
+			document.getElementById('kutu').style.margin="0px auto"
+		}
+		document.getElementById('kutu').style.height=yukseklik+"px";
+		document.getElementById('kutu').style.width=genislik+"px";
+		document.getElementById('kutu').style.backgroundColor=arkaplan;
+	}
+	</script>
+</head>
+<body>
+	<div class="banner">
+			<div><a href="../index.html" class="ana">Anasayfa</a></div>
+			<div><a href="hesap.html" class="ana">Hesap Makinesi</a></div>
+			<div><a href="arkap.html" class="ana">Arka p. değiştirme</a></div>
+			<div><a href="kare.html" class="ana">Kare Hareketleri</a></div>
+			<div><a href="öğrenci.html" class="ana">Geçti-kaldı</a></div>
+			<div><a href="yazirengi.html" class="ana">Yazı rengi seçme</a></div>
+			<div><a href="ceza.html" class="ana">BeratY.-Ceza</a></div>
+	</div>
+	<table border="9" align="center">
+		<tr>
+			<td>Yükseklik:</td>
+			<td><input type="number" name="" id="yukseklik"></td>
+		</tr>
+		<tr>
+			<td>Genişlik:</td>
+			<td><input type="number" name="" id="genislik"></td>
+		</tr>
+		<tr>
+			<td>Arka Plan Rengi:</td>
+			<td><input type="text" name="" id="arkaplan"></td>
+		</tr>
+		<tr>
+			<td>Hizalama:</td>
+			<td>
+				<select id="hizalama">
+					<option>sol</option>
+					<option>sağ</option>
+					<option>orta</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><input type="button" name="" value="Oluştur" onclick="olustur()"></td>
+		</tr>
+	</table>
+	<div id="kutu"></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body{	
+}
+.banner{
+	margin: 0px auto;
+	background: rgb(184,184,184);
+	background: linear-gradient(90deg, rgba(184,184,184,1) 0%, rgba(163,163,163,1) 20%, rgba(62,62,62,1) 100%);
+	width: 90%;
+	height: 50px;
+}
+.ana{
+	line-height: 50px;
+	width: 120px;
+	float: left;
+	margin-left: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+.ana:hover{
+	width: 120px;
+	height: 50px;
+	opacity: 0.4;
+}
+.container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.keys {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 18px;
+  background-color: white;
+  width: 24%;
+  height: 50px;
+  cursor: pointer;
+  margin-bottom:3px;
+  border: 1px solid black;
+}
+.key2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 18px;
+  background-color: red;
+  width: 24%;
+  height: 50px;
+  cursor: pointer;
+  margin-bottom:3px;
+
+  border: 1px solid black;
+}
+
+.key:hover {
+  background-color: #0D47A1;
+  color: white;
+}
+
+.key:active {
+  background-color: #42A5F5;
+  transform: translateY(3px);
+}
+
+.number-input {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: cursive;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom:10px;
+
+}

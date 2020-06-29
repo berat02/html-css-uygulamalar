@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../style/arkap.css">
+	<script type="text/javascript">
+		function berat(renk,btnId){
+			document.getElementById('anasayfa').style.backgroundColor=renk;
+			document.getElementById(btnId).style.backgroundColor=renk;
+		}
+		function oturum(){
+			var kullanıcı = (document.getElementById('user').value);
+			var password = (document.getElementById("password").value);
+			if (kullanıcı == "user" && password == "1234"){
+				alert('DOĞRU!')	
+			}
+			else{
+				alert('Hatalı')
+			}
+		}
+	</script>
+</head>
+	<div class="banner">
+			<div><a href="../index.html" class="ana">Anasayfa</a></div>
+			<div><a href="hesap.html" class="ana">Hesap Makinesi</a></div>
+			<div><a href="arkap.html" class="ana">Arka p. değiştirme</a></div>
+			<div><a href="kare.html" class="ana">Kare Hareketleri</a></div>
+			<div><a href="öğrenci.html" class="ana">Geçti-kaldı</a></div>
+			<div><a href="yazirengi.html" class="ana">Yazı rengi seçme</a></div>
+			<div><a href="ceza.html" class="ana">BeratY.-Ceza</a></div>
+	</div>
+<body id="anasayfa">
+<input id="limebtn" type="submit" name="" value="Lime" onclick="berat ('lime','limebtn')">
+<input id="cyanbtn" type="submit" name="" value="Cyan" onclick="berat ('cyan','cyanbtn')">
+<input id="pinkbtn" type="submit" name="" value="Pink" onclick="berat ('pink','pinkbtn')">
+<input id="redbtn"  type="submit" name="" value="Red"  onclick="berat ('red','redbtn')">
+<input id="graybtn" type="submit" name="" value="Gray" onclick="berat ('gray','graybtn')">
+<hr>
+<table border="9" bgcolor="#cdcdcd" align="center">
+	<tr>
+		<td align="center" rowspan="4">Hesap<br>Makinesi</td>
+	</tr>
+
+	<tr>
+		<td>Kullanıcı:</td>
+		<td><input id="user" type="user" name=""></td>
+	</tr>
+
+	<tr>
+		<td>Şifre:</td>
+		<td><input id="password" type="passWord" name=""></td>
+	</tr>
+	<tr >
+		<td align="center" colspan="3" ><input type="button" id="topla" onclick="oturum()" value="Oturum Aç" name="" ></td>
+	</tr>
+</table>
+</body>
+</html>

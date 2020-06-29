@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switchcase</title>
+	<link rel="stylesheet" type="text/css" href="../style/öğrenci.css">
+	<script type="text/javascript">
+	</script>
+	<div class="banner">
+			<div><a href="../index.html" class="ana">Anasayfa</a></div>
+			<div><a href="hesap.html" class="ana">Hesap Makinesi</a></div>
+			<div><a href="arkap.html" class="ana">Arka p. değiştirme</a></div>
+			<div><a href="kare.html" class="ana">Kare Hareketleri</a></div>
+			<div><a href="öğrenci.html" class="ana">Geçti-kaldı</a></div>
+			<div><a href="yazirengi.html" class="ana">Yazı rengi seçme</a></div>
+			<div><a href="ceza.html" class="ana">BeratY.-Ceza</a></div>
+	</div>
+<fieldset>
+	<legend id="ogr"></legend>
+	<table border="1">
+		<tr>
+			<td>Öğrenci</td>
+			<td>Y1</td>
+			<td>Y2</td>
+			<td>P1</td>
+			<td>P2</td>
+			<td>ORT</td>
+			<td>DURUM</td>
+		</tr>
+		<tr>
+			<td>  
+			<select id="ders">
+				<option>Seçiniz</option>
+				<option>WEB TASARIM </option>
+				<option>Grafik ve Animasyon</option>
+				<option>Açık Kaynak</option>
+			</select>
+			</td>
+			<td>
+				<input id="y1" type="text" name="">
+			</td>
+		
+			<td>
+				<input id="y2" type="text" name="">
+			</td>
+		
+			<td>
+				<input id="p1" type="text" name="">
+			</td>
+			<td>
+				<input id="p2"  type="text" name="" >
+			</td>
+			<td>
+				<input id="ort"  type="text" name="" disabled="">
+			</td>
+			<td>
+				<input id="durum"  type="text" name="" disabled="">
+			</td>								
+		</tr>
+		<tr>
+			<td colspan="7">
+				<input type="button" value="Hesapla" style="width: 100%;" onclick="hesapla()"></td>
+			</td>
+		</tr>				
+	</table>
+</fieldset>
+
+	<script type="text/javascript">	
+    var ogr = prompt('Öğrenci Adı :');
+    document.getElementById('ogr').innerHTML= ogr;
+    function hesapla(){
+    	var y1 = Number(document.getElementById('y1').value);
+    	var y2 = Number(document.getElementById('y2').value);
+    	var p1 = Number(document.getElementById('p1').value);
+    	var p2 = Number(document.getElementById('p2').value);
+    	var durum = "";
+    	var ort = (y1+y2+p1+p2) / 4;
+    	document.getElementById("ort").value = ort;
+    	if (ort >=50){
+    		durum = document.getElementById('ders').value + "Dersten Geçtiniz"
+    		document.getElementById("durum").value = 'GEÇTİ';
+    		document.getElementById('durum').style.backgroundColor = "green";
+    	}	
+    	else{
+    		document.getElementById("durum").value = 'KALDI';
+    		document.getElementById('durum').style.backgroundColor = "red";
+    	}
+    }
+	</script>
+</head>
+<body>
+</body>
+</html>

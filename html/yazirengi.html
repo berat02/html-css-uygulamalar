@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Başladık</title>
+	<link rel="stylesheet" type="text/css" href="../style/yazirengi.css">
+	<script type="text/javascript">
+		function olustur(){
+		var renkler=[];
+		renkler[0]=document.getElementById('renk1').value;
+		renkler[1]=document.getElementById('renk2').value;
+		renkler[2]=document.getElementById('renk3').value;
+		document.getElementById('sensin').innerHTML=renkler;
+		document.getElementById('hücre1').style.color=renkler[0];
+		document.getElementById('hücre2').style.color=renkler[1];
+		document.getElementById('hücre3').style.color=renkler[2];
+		}
+	</script>
+</head>
+<body>
+	<div class="banner">
+			<div><a href="../index.html" class="ana">Anasayfa</a></div>
+			<div><a href="hesap.html" class="ana">Hesap Makinesi</a></div>
+			<div><a href="arkap.html" class="ana">Arka p. değiştirme</a></div>
+			<div><a href="kare.html" class="ana">Kare Hareketleri</a></div>
+			<div><a href="öğrenci.html" class="ana">Geçti-kaldı</a></div>
+			<div><a href="yazirengi.html" class="ana">Yazı rengi seçme</a></div>
+			<div><a href="ceza.html" class="ana">BeratY.-Ceza</a></div>
+	</div>
+	<table border="2">
+	<tr>
+		<td id="hücre1">Renk1</td>
+		<td><select id="renk1">
+			<option>Black</option>
+			<option>Purple</option>
+			<option>Red</option>
+			<option>Pink</option>
+			<option>Yellow</option>
+		</select>
+	</tr>
+	<tr>
+		<td id="hücre2">Renk2</td>
+		<td><select id="renk2">
+			<option>Black</option>
+			<option>Purple</option>
+			<option>Red</option>
+			<option>Pink</option>
+			<option>Yellow</option>
+		</select>
+	</tr>
+	<tr>
+		<td id="hücre3">Renk3</td>
+	<td><select id="renk3">
+			<option>Black</option>
+			<option>Purple</option>
+			<option>Red</option>
+			<option>Pink</option>
+			<option>Yellow</option>
+		</select>
+	</tr>
+	<tr align="center">
+		<td colspan="2"><input type="button" name="" value="Yap" onclick="olustur()"></td>
+	</tr>	
+</table>
+<p id="sensin">
+</body>
+</html> 
